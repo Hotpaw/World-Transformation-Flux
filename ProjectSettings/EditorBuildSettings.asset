@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WorldTransitionLevel2.unity
     guid: 4b5cb72619116a845ad4d66eb8f1d1e1
+  - enabled: 1
+    path: Assets/Scenes/WorldTransitionLevel3.unity
+    guid: 2237b9587ee12014ca31214c2e4c7131
   m_configObjects: {}
