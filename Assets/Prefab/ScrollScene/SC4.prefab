@@ -1758,6 +1758,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8545411761995862346, guid: 5ae80fc211940e94ba56e79421760b57, type: 3}
+      propertyPath: moveFreq
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545411761995862346, guid: 5ae80fc211940e94ba56e79421760b57, type: 3}
       propertyPath: pathType
       value: 1
       objectReference: {fileID: 0}
@@ -2025,6 +2029,10 @@ PrefabInstance:
     - target: {fileID: 8545411761995862346, guid: 5ae80fc211940e94ba56e79421760b57, type: 3}
       propertyPath: moveDis
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545411761995862346, guid: 5ae80fc211940e94ba56e79421760b57, type: 3}
+      propertyPath: moveFreq
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8545411761995862346, guid: 5ae80fc211940e94ba56e79421760b57, type: 3}
       propertyPath: pathType

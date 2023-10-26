@@ -824,6 +824,8 @@ MonoBehaviour:
   - {fileID: 3630645142751403370, guid: 327712b4a3992494ab65ba16af64cf74, type: 3}
   - {fileID: 3630645142751403370, guid: 9d2798d9e83d3a642995b44b894fd674, type: 3}
   - {fileID: 3630645142751403370, guid: 62910d562c300554ea88172e03d45f1c, type: 3}
+  - {fileID: 3630645142751403370, guid: 48ad2b65e3a23e44b9fd78a921ce80fd, type: 3}
+  - {fileID: 3630645142751403370, guid: b7ec1de0c00358041aeccb693251568a, type: 3}
   multiplier: 0
 --- !u!1 &1343067469
 GameObject:
@@ -7408,7 +7410,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {r: 8.5101e-41, g: 8.5101e-41, b: 8.5101e-41, a: 8.5101e-41}
   - m_RefCount: 0
-    m_Data: {r: 4.1526e-41, g: 4.1526e-41, b: 4.1526e-41, a: 4.1526e-41}
+    m_Data: {r: 3.9704e-41, g: 3.9704e-41, b: 3.9704e-41, a: 3.9704e-41}
   - m_RefCount: 135
     m_Data: {r: 255, g: 255, b: 255, a: 255}
   m_TileObjectToInstantiateArray: []
@@ -8372,7 +8374,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {r: 8.1118e-41, g: 8.1118e-41, b: 8.1118e-41, a: 8.1118e-41}
   - m_RefCount: 0
-    m_Data: {r: 4.1624e-41, g: 4.1624e-41, b: 4.1624e-41, a: 4.1624e-41}
+    m_Data: {r: 3.9777e-41, g: 3.9777e-41, b: 3.9777e-41, a: 3.9777e-41}
   - m_RefCount: 41
     m_Data: {r: 255, g: 255, b: 255, a: 255}
   m_TileObjectToInstantiateArray: []
