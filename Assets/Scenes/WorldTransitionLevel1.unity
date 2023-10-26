@@ -15468,7 +15468,7 @@ MonoBehaviour:
   dimensions:
   - {fileID: 72750649}
   - {fileID: 1055186994}
-  timeBetweenSwitch: 5
+  timeBetweenSwitch: 3
   countdown: {fileID: 330180104}
 --- !u!95 &2055695076
 Animator:

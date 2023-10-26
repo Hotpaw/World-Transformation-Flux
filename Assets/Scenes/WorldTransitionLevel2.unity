@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: portal
       objectReference: {fileID: 0}
+    - target: {fileID: 6476551203048081823, guid: 083eac5dc3e0f744eb0a008fb5499887, type: 3}
+      propertyPath: scene
+      value: WorldTransitionLevel3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10141,7 +10145,7 @@ MonoBehaviour:
   dimensions:
   - {fileID: 603131336}
   - {fileID: 798858820}
-  timeBetweenSwitch: 5
+  timeBetweenSwitch: 3
   countdown: {fileID: 2137763021}
 --- !u!95 &1406937383
 Animator:
