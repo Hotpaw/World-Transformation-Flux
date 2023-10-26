@@ -130,6 +130,7 @@ public class Movement : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
             dashTimer = 0;
             Invoke("DashDone", 0.2f);
+            animator.SetBool("Dash", true);
         }
     }
 
@@ -137,6 +138,7 @@ public class Movement : MonoBehaviour
     {
         isDashing = false;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        animator.SetBool("Dash", false);
     }
 
     public void Jump(InputAction.CallbackContext context)
