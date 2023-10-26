@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
+
 
 
 //This script is a clean powerful solution to a top-down movement player
@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     public float lowerVerticalVelocityClamp;
     public Vector2 groundCheckBoxSize;
     public LayerMask groundLayer;
+    public bool isGrounded;
 
     [Header("Dash Variables")]
     public float dashStrength;
@@ -83,6 +84,8 @@ public class Movement : MonoBehaviour
                     doubleJump = false;
 
                 animator.SetTrigger("Jump");
+                playerAudio pA = GetComponent<playerAudio>();
+                pA.playSound("Jump");
             }
             RaycastHit2D ray = Physics2D.Raycast(transform.position, -transform.up, groundCheckLength + 0.1f, groundLayer);
 
@@ -119,7 +122,8 @@ public class Movement : MonoBehaviour
         if (context.action.IsPressed() && dashTimer > dashCooldown && !dead)
         {
             int i;
-
+            playerAudio pA = GetComponent<playerAudio>();
+            pA.playSound("Jump");
             if (playerSprite.flipX)
                 i = -1;
             else
@@ -151,7 +155,7 @@ public class Movement : MonoBehaviour
 
     private void GroundCheck()
     {
-        bool isGrounded = Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckLength, groundLayer);
+        isGrounded = Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckLength, groundLayer);
         if (isGrounded)
         {
             doubleJump = true;
@@ -182,6 +186,8 @@ public class Movement : MonoBehaviour
 
     public void Die()
     {
+        playerAudio pA = GetComponent<playerAudio>();
+        pA.playSound("Death");
         rb.velocity = new Vector2(0, 5);
         animator.SetTrigger("Die");
         GetComponent<Collider2D>().enabled = false;
