@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +9,7 @@ public class DimensionSwitch : MonoBehaviour
 {
     [SerializeField] private GameObject[] dimensions;
     [SerializeField] private float timeBetweenSwitch;
+    [SerializeField] private TMP_Text countdown;
 
     private Animator animator;
     private int currentDimension = 0;
@@ -25,6 +28,8 @@ public class DimensionSwitch : MonoBehaviour
             animator.SetTrigger("DimensionSwitch");
             time = 0f;
         }
+
+        countdown.text = Math.Round(timeBetweenSwitch - time, 2).ToString();
     }
 
     public void SwitchDimension()
