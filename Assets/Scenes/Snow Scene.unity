@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Follow: {fileID: 799041356}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 10
+    OrthographicSize: 5.34
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -560,7 +560,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5.34
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7447,7 +7447,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {r: 8.5101e-41, g: 8.5101e-41, b: 8.5101e-41, a: 8.5101e-41}
   - m_RefCount: 0
-    m_Data: {r: 3.9704e-41, g: 3.9704e-41, b: 3.9704e-41, a: 3.9704e-41}
+    m_Data: {r: 1.03595e-40, g: 1.03595e-40, b: 1.03595e-40, a: 1.03595e-40}
   - m_RefCount: 135
     m_Data: {r: 255, g: 255, b: 255, a: 255}
   m_TileObjectToInstantiateArray: []
@@ -8411,7 +8411,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {r: 8.1118e-41, g: 8.1118e-41, b: 8.1118e-41, a: 8.1118e-41}
   - m_RefCount: 0
-    m_Data: {r: 3.9777e-41, g: 3.9777e-41, b: 3.9777e-41, a: 3.9777e-41}
+    m_Data: {r: 1.03668e-40, g: 1.03668e-40, b: 1.03668e-40, a: 1.03668e-40}
   - m_RefCount: 41
     m_Data: {r: 255, g: 255, b: 255, a: 255}
   m_TileObjectToInstantiateArray: []
