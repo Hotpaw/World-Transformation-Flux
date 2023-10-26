@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/P\xF6ta.unity"
+    path: Assets/Scenes/Snow Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Selma.unity
+    guid: 4eb8a8320cb6a1f45a366bba46ffda0b
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e5554e83205d47840a87f1092051927e
   m_configObjects: {}
