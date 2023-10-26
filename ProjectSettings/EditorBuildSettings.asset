@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: bdcb880dff2976c44949dcc80ba7ebe4
+  - enabled: 1
+    path: Assets/Scenes/WorldTransitionLevel4.unity
+    guid: 2c2c63a84184e8a44b64b95d97487529
+  - enabled: 1
+    path: Assets/Scenes/WorldTransitionLevel5.unity
+    guid: 261ef9c3721926e478ffa8b91fc716ab
   m_configObjects: {}
