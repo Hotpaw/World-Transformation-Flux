@@ -17,7 +17,7 @@ public class chunkTrigger : MonoBehaviour
         {
             if (!updated)
             {
-                Debug.Log("CHUNK TRIGGER" + gameObject.name);
+               
 
                 updated = true;
                 FindAnyObjectByType<TileManager>().UpdateMultiplier(); 

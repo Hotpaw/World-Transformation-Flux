@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Tilemaps;
-
+using System.Collections.Generic;
 
 public class Chunk : MonoBehaviour
 {
@@ -13,14 +13,23 @@ public class Chunk : MonoBehaviour
     public Tilemap layer2;
     public Tilemap layer3;
     public Tilemap hazardLayer;
-   
+    public Vector3 offset;
     public float spriteDelay;
     public float multiplier;
     public ParticleSystem snowSpawnEffect;
+    public List<ParticleSystem> particles;
     public void OnEnable()
     {
+        particles = new List<ParticleSystem>();
+        for (int i = 0; i < 30; i++)
+        {
+            Instantiate(snowSpawnEffect);
+            particles.Add(snowSpawnEffect);
+        }
         RevealTiles();
-       
+
+
+
     }
     private void Update()
     {
@@ -37,13 +46,13 @@ public class Chunk : MonoBehaviour
             StartCoroutine(ActiveTileLayer(hazardLayer));
 
         }
-       
+
 
     }
     IEnumerator ActiveTileLayer(Tilemap mapLayer)
     {
-        
-        if(mapLayer != null)
+
+        if (mapLayer != null)
         {
             foreach (var position in mapLayer.cellBounds.allPositionsWithin)
             {
@@ -63,7 +72,7 @@ public class Chunk : MonoBehaviour
                 if (mapLayer.HasTile(position))
                 {
                     Tile tile = (Tile)mapLayer.GetTile(position);
-                    
+
 
                     tile.color = new Color(255, 255, 255, 255);
                     tile.colliderType = Tile.ColliderType.Sprite;
@@ -84,31 +93,48 @@ public class Chunk : MonoBehaviour
                 }
             }
         }
-      
-        
-       
+
+
+
     }
-   
+
     public void CreateSprite(Sprite sprite, Vector3 localPosition, float time)
     {
-        snowSpawnEffect.Stop();
-        Vector3 offset = new Vector3((35 * multiplier) + 0.5f, 2, 0);
+
         var gameObject = new GameObject();
         var spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
-        
-        gameObject.transform.position = localPosition + offset;
-        gameObject.transform.DOMoveY(localPosition.y +0.5f, spriteDelay).SetEase(ease);
-        //gameObject.transform.DOPunchScale(Vector3.one, 0.5f);
+        spriteRenderer.sprite = sprite;
+
+        gameObject.transform.position = localPosition + offset + new Vector3(0.5f, 3, 0);
+        gameObject.transform.DOMoveY(localPosition.y + 1.5f, spriteDelay).SetEase(ease);
+
+      
+        if (sprite.name == "snoawtile1" || sprite.name == "snoawtile2" || sprite.name == "snoawtile3")
+        {
+            int particlenr = 0;
+            if (particles[particlenr].isPlaying)
+            {
+                if(particlenr != particles.Count - 1)
+                {
+                    particlenr++;
+                }
+                else
+                {
+                    particlenr = 0;
+                }
+               
+            }
+            particles[particlenr].transform.position = localPosition + offset + new Vector3(0.5f,1,0);
+            particles[particlenr].Play();
+
+        }
+
         spriteRenderer.DOFade(0, 0f);
         spriteRenderer.DOFade(1, 0.3f);
-        snowSpawnEffect.transform.position = localPosition + offset;
-        snowSpawnEffect.Play();
-        spriteRenderer.sprite = sprite;
         Destroy(gameObject, time);
     }
-    
-    
-    
+
+
 }
 
 

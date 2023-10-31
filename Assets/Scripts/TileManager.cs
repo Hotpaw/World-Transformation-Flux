@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class TileManager : MonoBehaviour
 {
@@ -12,16 +13,16 @@ public class TileManager : MonoBehaviour
     {
         
     }
-    private void Update()
-    {
-       
-    }
-    // Update is called once per frame
+   
     public void SpawnChunk(Transform currentChunkTransform)
     {
-        GameObject Chunk = Instantiate(TileMap[currentPlattform], currentChunkTransform.position + new Vector3(+35,0,0), Quaternion.identity);
-     
-
+       TileMap[currentPlattform].GetComponent<Chunk>().layer1.CompressBounds();
+       Vector3Int tileSize = TileMap[currentPlattform].GetComponent<Chunk>().layer1.size;
+        Debug.Log(tileSize);
+        GameObject newTileMap = Instantiate(TileMap[currentPlattform], currentChunkTransform.position + tileSize, Quaternion.identity);
+        newTileMap.GetComponent<Chunk>().offset = tileSize;
+      
+       
         currentPlattform++;
         
        

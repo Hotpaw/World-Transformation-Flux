@@ -85,7 +85,7 @@ public class Movement : MonoBehaviour
 
                 animator.SetTrigger("Jump");
                 playerAudio pA = GetComponent<playerAudio>();
-               // pA.playSound("Jump");
+               pA.playSound("Jump");
             }
             RaycastHit2D ray = Physics2D.Raycast(transform.position, -transform.up, groundCheckLength + 0.1f, groundLayer);
 
@@ -123,7 +123,7 @@ public class Movement : MonoBehaviour
         {
             int i;
             playerAudio pA = GetComponent<playerAudio>();
-            //pA.playSound("Jump");
+            pA.playSound("Jump");
             if (playerSprite.flipX)
                 i = -1;
             else
@@ -187,7 +187,7 @@ public class Movement : MonoBehaviour
     public void Die()
     {
         playerAudio pA = GetComponent<playerAudio>();
-        //pA.playSound("Death");
+        pA.playSound("Death");
         rb.velocity = new Vector2(0, 5);
         animator.SetTrigger("Die");
         GetComponent<Collider2D>().enabled = false;
